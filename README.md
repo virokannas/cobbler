@@ -2,6 +2,8 @@
 
 This is a very simple SwiftUI player for what used to be Nectarine Demoscene Radio (now scenestream.net).
 
+<img src="screenshot.png" width="50%" height="50%">
+
 It directly plugs into one of the https/aac streams and pulls currently playing metadata using the scenestream XML API.
 
 And since it's using the standard system component for media playback, your keyboard play/pause button will also work.
