@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84472A662883319F00CF74CF /* CobblerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84472A562883319F00CF74CF /* CobblerApp.swift */; };
+		84472A672883319F00CF74CF /* CobblerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84472A562883319F00CF74CF /* CobblerApp.swift */; };
+		84472A682883319F00CF74CF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84472A572883319F00CF74CF /* MainView.swift */; };
+		84472A692883319F00CF74CF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84472A572883319F00CF74CF /* MainView.swift */; };
+		84472A6A2883319F00CF74CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84472A582883319F00CF74CF /* Assets.xcassets */; };
+		84472A6B2883319F00CF74CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84472A582883319F00CF74CF /* Assets.xcassets */; };
+		84472A772883372800CF74CF /* SwiftyXMLParser in Frameworks */ = {isa = PBXBuildFile; productRef = 84472A762883372800CF74CF /* SwiftyXMLParser */; };
+		84472A7A2883372E00CF74CF /* SwiftyXMLParser in Frameworks */ = {isa = PBXBuildFile; productRef = 84472A792883372E00CF74CF /* SwiftyXMLParser */; };
+		84472A7D288337CF00CF74CF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 84472A7C288337CF00CF74CF /* Alamofire */; };
+		84472A7F288337D600CF74CF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 84472A7E288337D600CF74CF /* Alamofire */; };
+		84472A8128835A2600CF74CF /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84472A8028835A2600CF74CF /* AVKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		84472A562883319F00CF74CF /* CobblerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobblerApp.swift; sourceTree = "<group>"; };
+		84472A572883319F00CF74CF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		84472A582883319F00CF74CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84472A5D2883319F00CF74CF /* Cobbler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cobbler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84472A632883319F00CF74CF /* Cobbler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cobbler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84472A652883319F00CF74CF /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		84472A742883332800CF74CF /* Cobbler--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Cobbler--macOS--Info.plist"; sourceTree = "<group>"; };
+		84472A8028835A2600CF74CF /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84472A5A2883319F00CF74CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84472A7A2883372E00CF74CF /* SwiftyXMLParser in Frameworks */,
+				84472A7D288337CF00CF74CF /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84472A602883319F00CF74CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84472A772883372800CF74CF /* SwiftyXMLParser in Frameworks */,
+				84472A7F288337D600CF74CF /* Alamofire in Frameworks */,
+				84472A8128835A2600CF74CF /* AVKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84472A502883319E00CF74CF = {
+			isa = PBXGroup;
+			children = (
+				84472A742883332800CF74CF /* Cobbler--macOS--Info.plist */,
+				84472A552883319F00CF74CF /* Shared */,
+				84472A642883319F00CF74CF /* macOS */,
+				84472A5E2883319F00CF74CF /* Products */,
+				84472A782883372E00CF74CF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84472A552883319F00CF74CF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				84472A562883319F00CF74CF /* CobblerApp.swift */,
+				84472A572883319F00CF74CF /* MainView.swift */,
+				84472A582883319F00CF74CF /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		84472A5E2883319F00CF74CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84472A5D2883319F00CF74CF /* Cobbler.app */,
+				84472A632883319F00CF74CF /* Cobbler.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84472A642883319F00CF74CF /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				84472A652883319F00CF74CF /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		84472A782883372E00CF74CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84472A8028835A2600CF74CF /* AVKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84472A5C2883319F00CF74CF /* Cobbler (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84472A6E2883319F00CF74CF /* Build configuration list for PBXNativeTarget "Cobbler (iOS)" */;
+			buildPhases = (
+				84472A592883319F00CF74CF /* Sources */,
+				84472A5A2883319F00CF74CF /* Frameworks */,
+				84472A5B2883319F00CF74CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cobbler (iOS)";
+			packageProductDependencies = (
+				84472A792883372E00CF74CF /* SwiftyXMLParser */,
+				84472A7C288337CF00CF74CF /* Alamofire */,
+			);
+			productName = "Cobbler (iOS)";
+			productReference = 84472A5D2883319F00CF74CF /* Cobbler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84472A622883319F00CF74CF /* Cobbler (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84472A712883319F00CF74CF /* Build configuration list for PBXNativeTarget "Cobbler (macOS)" */;
+			buildPhases = (
+				84472A5F2883319F00CF74CF /* Sources */,
+				84472A602883319F00CF74CF /* Frameworks */,
+				84472A612883319F00CF74CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cobbler (macOS)";
+			packageProductDependencies = (
+				84472A762883372800CF74CF /* SwiftyXMLParser */,
+				84472A7E288337D600CF74CF /* Alamofire */,
+			);
+			productName = "Cobbler (macOS)";
+			productReference = 84472A632883319F00CF74CF /* Cobbler.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84472A512883319E00CF74CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					84472A5C2883319F00CF74CF = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					84472A622883319F00CF74CF = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 84472A542883319E00CF74CF /* Build configuration list for PBXProject "Cobbler" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84472A502883319E00CF74CF;
+			packageReferences = (
+				84472A752883372800CF74CF /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */,
+				84472A7B288337CF00CF74CF /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = 84472A5E2883319F00CF74CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84472A5C2883319F00CF74CF /* Cobbler (iOS) */,
+				84472A622883319F00CF74CF /* Cobbler (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84472A5B2883319F00CF74CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84472A6A2883319F00CF74CF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84472A612883319F00CF74CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84472A6B2883319F00CF74CF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84472A592883319F00CF74CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84472A682883319F00CF74CF /* MainView.swift in Sources */,
+				84472A662883319F00CF74CF /* CobblerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84472A5F2883319F00CF74CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84472A692883319F00CF74CF /* MainView.swift in Sources */,
+				84472A672883319F00CF74CF /* CobblerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		84472A6C2883319F00CF74CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84472A6D2883319F00CF74CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		84472A6F2883319F00CF74CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3F94936UV5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = software.outofthebox.Cobbler;
+				PRODUCT_NAME = Cobbler;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84472A702883319F00CF74CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3F94936UV5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = software.outofthebox.Cobbler;
+				PRODUCT_NAME = Cobbler;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84472A722883319F00CF74CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3F94936UV5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Cobbler--macOS--Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = software.outofthebox.Cobbler;
+				PRODUCT_NAME = Cobbler;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		84472A732883319F00CF74CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3F94936UV5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Cobbler--macOS--Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = software.outofthebox.Cobbler;
+				PRODUCT_NAME = Cobbler;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84472A542883319E00CF74CF /* Build configuration list for PBXProject "Cobbler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84472A6C2883319F00CF74CF /* Debug */,
+				84472A6D2883319F00CF74CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84472A6E2883319F00CF74CF /* Build configuration list for PBXNativeTarget "Cobbler (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84472A6F2883319F00CF74CF /* Debug */,
+				84472A702883319F00CF74CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84472A712883319F00CF74CF /* Build configuration list for PBXNativeTarget "Cobbler (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84472A722883319F00CF74CF /* Debug */,
+				84472A732883319F00CF74CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84472A752883372800CF74CF /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yahoojapan/SwiftyXMLParser";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		84472A7B288337CF00CF74CF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84472A762883372800CF74CF /* SwiftyXMLParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84472A752883372800CF74CF /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */;
+			productName = SwiftyXMLParser;
+		};
+		84472A792883372E00CF74CF /* SwiftyXMLParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84472A752883372800CF74CF /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */;
+			productName = SwiftyXMLParser;
+		};
+		84472A7C288337CF00CF74CF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84472A7B288337CF00CF74CF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		84472A7E288337D600CF74CF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84472A7B288337CF00CF74CF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 84472A512883319E00CF74CF /* Project object */;
+}
