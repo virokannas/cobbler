@@ -18,6 +18,13 @@
 		84472A7D288337CF00CF74CF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 84472A7C288337CF00CF74CF /* Alamofire */; };
 		84472A7F288337D600CF74CF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 84472A7E288337D600CF74CF /* Alamofire */; };
 		84472A8128835A2600CF74CF /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84472A8028835A2600CF74CF /* AVKit.framework */; };
+		847F40CA28BEB13A00146C45 /* CobblerTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F40C928BEB13A00146C45 /* CobblerTVApp.swift */; };
+		847F40CE28BEB13B00146C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847F40CD28BEB13B00146C45 /* Assets.xcassets */; };
+		847F40D128BEB13B00146C45 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847F40D028BEB13B00146C45 /* Preview Assets.xcassets */; };
+		847F40D528BEB14400146C45 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84472A572883319F00CF74CF /* MainView.swift */; };
+		847F40D728BEB16800146C45 /* SwiftyXMLParser in Frameworks */ = {isa = PBXBuildFile; productRef = 847F40D628BEB16800146C45 /* SwiftyXMLParser */; };
+		847F40D928BEB16800146C45 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 847F40D828BEB16800146C45 /* Alamofire */; };
+		847F40DB28BEB16F00146C45 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847F40DA28BEB16F00146C45 /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +36,11 @@
 		84472A652883319F00CF74CF /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		84472A742883332800CF74CF /* Cobbler--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Cobbler--macOS--Info.plist"; sourceTree = "<group>"; };
 		84472A8028835A2600CF74CF /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		847F40C728BEB13A00146C45 /* CobblerTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CobblerTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		847F40C928BEB13A00146C45 /* CobblerTVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobblerTVApp.swift; sourceTree = "<group>"; };
+		847F40CD28BEB13B00146C45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		847F40D028BEB13B00146C45 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		847F40DA28BEB16F00146C45 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS15.4.sdk/System/Library/Frameworks/AVKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		847F40C428BEB13A00146C45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847F40D728BEB16800146C45 /* SwiftyXMLParser in Frameworks */,
+				847F40D928BEB16800146C45 /* Alamofire in Frameworks */,
+				847F40DB28BEB16F00146C45 /* AVKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -60,6 +82,7 @@
 				84472A742883332800CF74CF /* Cobbler--macOS--Info.plist */,
 				84472A552883319F00CF74CF /* Shared */,
 				84472A642883319F00CF74CF /* macOS */,
+				847F40C828BEB13A00146C45 /* CobblerTV */,
 				84472A5E2883319F00CF74CF /* Products */,
 				84472A782883372E00CF74CF /* Frameworks */,
 			);
@@ -80,6 +103,7 @@
 			children = (
 				84472A5D2883319F00CF74CF /* Cobbler.app */,
 				84472A632883319F00CF74CF /* Cobbler.app */,
+				847F40C728BEB13A00146C45 /* CobblerTV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +119,28 @@
 		84472A782883372E00CF74CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				847F40DA28BEB16F00146C45 /* AVKit.framework */,
 				84472A8028835A2600CF74CF /* AVKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		847F40C828BEB13A00146C45 /* CobblerTV */ = {
+			isa = PBXGroup;
+			children = (
+				847F40C928BEB13A00146C45 /* CobblerTVApp.swift */,
+				847F40CD28BEB13B00146C45 /* Assets.xcassets */,
+				847F40CF28BEB13B00146C45 /* Preview Content */,
+			);
+			path = CobblerTV;
+			sourceTree = "<group>";
+		};
+		847F40CF28BEB13B00146C45 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				847F40D028BEB13B00146C45 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +188,27 @@
 			productReference = 84472A632883319F00CF74CF /* Cobbler.app */;
 			productType = "com.apple.product-type.application";
 		};
+		847F40C628BEB13A00146C45 /* CobblerTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847F40D428BEB13B00146C45 /* Build configuration list for PBXNativeTarget "CobblerTV" */;
+			buildPhases = (
+				847F40C328BEB13A00146C45 /* Sources */,
+				847F40C428BEB13A00146C45 /* Frameworks */,
+				847F40C528BEB13A00146C45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CobblerTV;
+			packageProductDependencies = (
+				847F40D628BEB16800146C45 /* SwiftyXMLParser */,
+				847F40D828BEB16800146C45 /* Alamofire */,
+			);
+			productName = CobblerTV;
+			productReference = 847F40C728BEB13A00146C45 /* CobblerTV.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -152,7 +216,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					84472A5C2883319F00CF74CF = {
@@ -160,6 +224,9 @@
 					};
 					84472A622883319F00CF74CF = {
 						CreatedOnToolsVersion = 13.3.1;
+					};
+					847F40C628BEB13A00146C45 = {
+						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
@@ -182,6 +249,7 @@
 			targets = (
 				84472A5C2883319F00CF74CF /* Cobbler (iOS) */,
 				84472A622883319F00CF74CF /* Cobbler (macOS) */,
+				847F40C628BEB13A00146C45 /* CobblerTV */,
 			);
 		};
 /* End PBXProject section */
@@ -203,6 +271,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		847F40C528BEB13A00146C45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847F40D128BEB13B00146C45 /* Preview Assets.xcassets in Resources */,
+				847F40CE28BEB13B00146C45 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -221,6 +298,15 @@
 			files = (
 				84472A692883319F00CF74CF /* MainView.swift in Sources */,
 				84472A672883319F00CF74CF /* CobblerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847F40C328BEB13A00146C45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847F40D528BEB14400146C45 /* MainView.swift in Sources */,
+				847F40CA28BEB13A00146C45 /* CobblerTVApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +541,63 @@
 			};
 			name = Release;
 		};
+		847F40D228BEB13B00146C45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CobblerTV/Preview Content\"";
+				DEVELOPMENT_TEAM = 3F94936UV5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = software.outofthebox.CobblerTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.4;
+			};
+			name = Debug;
+		};
+		847F40D328BEB13B00146C45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CobblerTV/Preview Content\"";
+				DEVELOPMENT_TEAM = 3F94936UV5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = software.outofthebox.CobblerTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -481,6 +624,15 @@
 			buildConfigurations = (
 				84472A722883319F00CF74CF /* Debug */,
 				84472A732883319F00CF74CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		847F40D428BEB13B00146C45 /* Build configuration list for PBXNativeTarget "CobblerTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847F40D228BEB13B00146C45 /* Debug */,
+				847F40D328BEB13B00146C45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -523,6 +675,16 @@
 			productName = Alamofire;
 		};
 		84472A7E288337D600CF74CF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84472A7B288337CF00CF74CF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		847F40D628BEB16800146C45 /* SwiftyXMLParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84472A752883372800CF74CF /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */;
+			productName = SwiftyXMLParser;
+		};
+		847F40D828BEB16800146C45 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 84472A7B288337CF00CF74CF /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
