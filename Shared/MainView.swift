@@ -41,6 +41,8 @@ extension Double {
 struct SongEntry {
     var artist: String = ""
     var song: String = ""
+    var artistID: Int = 0
+    var songID: Int = 0
     var songDuration: Double = 0.0
     var requester: String = ""
     var playStart: Date = Date.now
@@ -53,6 +55,8 @@ struct SongEntry {
         }
         self.song = entry.song.text ?? "UNKNOWN"
         self.songDuration = (entry.song.attributes["length"] ?? "0:00").asDuration
+        self.artistID = Int(entry.artist.attributes["id"] ?? "0") ?? 0
+        self.songID = Int(entry.song.attributes["id"] ?? "0") ?? 0
         self.requester = entry.requester.text ?? "UNKNOWN"
         if let pstext = entry.playstart.text {
             self.playStart = pstext.asDate
@@ -65,6 +69,14 @@ struct SongEntry {
         return songDuration - Date.now.timeIntervalSince(playStart)
     }
     
+    var songURL: URL {
+        return URL(string: "https://scenestream.net/demovibes/song/\(self.songID)/")!
+    }
+
+    var artistURL: URL {
+        return URL(string: "https://scenestream.net/demovibes/artist/\(self.artistID)/")!
+    }
+
     var progress: Double {
         if self.songDuration == 0.0 {
             return 0.0
@@ -88,7 +100,6 @@ class NectaQueue: NSObject, ObservableObject, AVPlayerItemMetadataOutputPushDele
             if let data = response.data {
                 print(String(data: data, encoding: .utf8)!)
                 let xml = XML.parse(data)
-                
                 DispatchQueue.main.async {
                     newQueue.objectWillChange.send()
                     newQueue.nowPlaying = SongEntry(xml.playlist.now.entry)
@@ -127,23 +138,38 @@ struct MainView: View {
     let timer2 = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     @State var streamURL: URL = URL(string: "https://scenestream.io/necta48.aac")!
+    @State var volume: Float = UserDefaults.standard.value(forKey: "volume") as? Float ?? 75
     var player: AVPlayer = AVPlayer()
     @ObservedObject var queue: NectaQueue = NectaQueue()
     
     init() {
         self.player = AVPlayer(url: streamURL)
         self.queue = NectaQueue.load()
+        self.player.volume = (UserDefaults.standard.value(forKey: "volume") as? Float ?? 75) / 100.0
     }
     
     var body: some View {
         VStack() {
-            Text(queue.nowPlaying.song).font(.headline)
-            Text(queue.nowPlaying.artist).font(.subheadline)
+            HStack {
+                Text(queue.nowPlaying.song).font(.headline)
+                Link(destination: queue.nowPlaying.songURL, label: {Text("􀉣")}).font(.headline)
+            }
+            HStack {
+                Text(queue.nowPlaying.artist).font(.subheadline)
+                Link(destination: queue.nowPlaying.artistURL, label: {Text("􀉣")}).font(.subheadline)
+            }
             Text("requested by: \(queue.nowPlaying.requester)").font(.footnote)
             ProgressView(value: queue.nowPlaying.progress).progressViewStyle(.linear)
-            HStack() {
+            HStack(alignment: .center, spacing: 16) {
                 Text(queue.nowPlaying.songDuration.asMinSec).font(.caption)
-                Spacer()
+                HStack(alignment: .center) {
+                    Text("􀊡")
+                    Slider(value: $volume, in: 0...100) { chg in
+                        player.volume = volume / 100.0
+                        UserDefaults.standard.set(volume, forKey: "volume")
+                    }
+                    Text("􀊩")
+                }
                 Text(queue.nowPlaying.timeLeft.asMinSec).font(.caption)
             }
             VideoPlayer(player: player).onAppear {
